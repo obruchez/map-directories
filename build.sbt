@@ -2,7 +2,7 @@ name := "map-directories"
 
 version := "0.1"
 
-scalaVersion := "2.12.8"
+scalaVersion := "2.13.3"
 
 libraryDependencies ++= Seq("com.google.guava" % "guava" % "27.0.1-jre",
                             "commons-io" % "commons-io" % "2.6")

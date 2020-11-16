@@ -36,7 +36,7 @@ object FileUtils {
 
     Files.walkFileTree(path, fileVisitOptionSet, Integer.MAX_VALUE, simpleFileVisitor)
 
-    files
+    files.toSeq
   }
 }
 
