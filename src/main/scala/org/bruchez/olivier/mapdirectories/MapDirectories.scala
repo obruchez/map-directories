@@ -32,19 +32,17 @@ object MapDirectories {
     println(s"Matching file count: ${matchingFiles.size}")
     println()
 
-    matchingFiles.flatMap(kv => kv._2.map(kv._1 -> _)).foreach {
-      case (srcFileInfo, dstFileInfo) =>
-        println(s" -   '${srcFileInfo.path.toFile.getAbsolutePath}'")
-        println(s"   = '${dstFileInfo.path.toFile.getAbsolutePath}'")
+    matchingFiles.flatMap(kv => kv._2.map(kv._1 -> _)).foreach { case (srcFileInfo, dstFileInfo) =>
+      println(s" -   '${srcFileInfo.path.toFile.getAbsolutePath}'")
+      println(s"   = '${dstFileInfo.path.toFile.getAbsolutePath}'")
     }
     println()
 
     println(s"Non-matching file count: ${nonMatchingFiles.size}")
     println()
 
-    nonMatchingFiles.foreach {
-      case (srcFileInfo, _) =>
-        println(s" - '${srcFileInfo.path.toFile.getAbsolutePath}'")
+    nonMatchingFiles.foreach { case (srcFileInfo, _) =>
+      println(s" - '${srcFileInfo.path.toFile.getAbsolutePath}'")
     }
   }
 

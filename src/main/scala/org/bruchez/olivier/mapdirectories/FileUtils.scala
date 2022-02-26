@@ -23,8 +23,10 @@ object FileUtils {
         override def visitFileFailed(file: Path, e: IOException): FileVisitResult =
           FileVisitResult.SKIP_SUBTREE
 
-        override def preVisitDirectory(directory: Path,
-                                       attributes: BasicFileAttributes): FileVisitResult = {
+        override def preVisitDirectory(
+            directory: Path,
+            attributes: BasicFileAttributes
+        ): FileVisitResult = {
           // Hack to avoid security exceptions
           if (directory.toFile.listFiles().isEmpty) {
             FileVisitResult.SKIP_SUBTREE

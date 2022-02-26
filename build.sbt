@@ -2,10 +2,10 @@ name := "map-directories"
 
 version := "0.1"
 
-scalaVersion := "2.13.3"
+scalaVersion := "2.13.8"
 
-libraryDependencies ++= Seq("com.google.guava" % "guava" % "27.0.1-jre",
-                            "commons-io" % "commons-io" % "2.6")
+libraryDependencies ++= Seq("com.google.guava" % "guava" % "31.0.1-jre",
+                            "commons-io" % "commons-io" % "2.11.0")
 
 mainClass in assembly := Some("org.bruchez.olivier.mapdirectories.MapDirectories")
 
